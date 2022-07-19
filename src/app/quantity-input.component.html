@@ -1,0 +1,5 @@
+<button (click)="updateValue(+value - 1)">-</button>
+<input [ngModel]="value"
+       (ngModelChange)="updateValue($event)"
+       type="string">
+<button (click)="updateValue(+value + 1)">+</button>

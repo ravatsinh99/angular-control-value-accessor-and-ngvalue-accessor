@@ -1,0 +1,15 @@
+<br />
+<h5>Form Control :</h5>
+<form [formGroup]="numberForm" (ngSubmit)="saveData()">
+  <app-quantity-input formControlName="numberValue"></app-quantity-input>
+  <button type="submit">Save</button>
+  <br />
+  <label class="error" *ngIf="numberControls['numberValue'].touched">
+    Please Enter any number
+  </label>
+</form>
+<div>Quantity: {{ numberForm.value['numberValue'] }}</div>
+
+<h5>Ng Model :</h5>
+<app-quantity-input [(ngModel)]="myNumber"></app-quantity-input>
+<div>Quantity: {{ myNumber }}</div>
